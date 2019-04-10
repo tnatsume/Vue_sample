@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <meta http-equiv="Content-Type" content="text/html"/>
+  </head>
+  <body>
+    <div id="app">
+		<h1 v-if="num>=10">10以上</h1>
+        <h2 v-else-if="num>=5">5以上</h2>
+        <h3 v-else>4未満</h3>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+	var app = new Vue({
+		el:"#app",
+		data(){
+			return {
+				num: 10
+			}
+		}
+	});
+  </script>
+</html>

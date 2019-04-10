@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <meta http-equiv="Content-Type" content="text/html"/>
+  </head>
+  <body>
+    <div id="app"class="app">
+		<ul>
+            <li v-for="todo in todos">
+                <p>{{todo.id}} {{todo.text}}</p>
+            
+            </li>
+        
+        </ul>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+	var app = new Vue({
+		el:"#app",
+		data(){
+            return {
+                todos:[
+                {id:1,text:"油そばを食べる1"},
+                {id:2,text:"油そばを食べる3"},
+                {id:3,text:"油そばを食べる3"},
+                {id:4,text:"油そばを食べる4"},
+                {id:5,text:"油そばを食べる5"},
+                {id:6,text:"油そばを食べる6"},
+                {id:7,text:"油そばを食べる7"},
+                {id:8,text:"油そばを食べる8"},
+                {id:9,text:"油そばを食べる9"},
+                {id:10,text:"油そばを食べる10"}
+                ]
+            }
+            
+		}
+	});
+  </script>
+</html>
+
+<style>
+.app{
+    list-style-type:none;
+}
+</style>
