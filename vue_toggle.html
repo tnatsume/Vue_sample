@@ -1,0 +1,51 @@
+<!まだできていない>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <meta http-equiv="Content-Type" content="text/html"/>
+  </head>
+  <body>
+    <div id="app">
+		<input type="button"
+               value="BUTTON"
+               class="btn-toggle"
+               click="tapButton()"
+               :class="{'is-active':flag}"
+               />
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+	var app = new Vue({
+		el:"#app",
+            flag: false,
+            tapButton(){
+                alert('hi');
+                console.log("hello");
+                this.flag = ! this.flag;
+            }
+        
+	});
+  </script>
+</html>
+
+<style>
+.btn-toggle {
+  widows: auto;
+  height: auto;
+  padding: 10px;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: thin;
+  box-shadow: #000 1px 1px 1px;
+}
+
+.btn-toggle.is-active {
+  background-color: brown;
+}
+</style>

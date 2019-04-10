@@ -6,22 +6,17 @@
     <meta http-equiv="Content-Type" content="text/html"/>
   </head>
   <body>
-    <div id="app"class="app">
-		<input 
-            type="button"
-            value="PUSH"
-            v-on:click="tapButton()"
-        />
+    <div id="app">
+		<button v-on:click="counter += 1">Add 1</button>
+        <p>The button above has been clicked {{ counter }} times.</p>
     </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
 	var app = new Vue({
 		el:"#app",
-        methods:{
-            tapButton(){
-                console.log("Hello");
-            }
+        data:{
+            counter:0
         }
 	});
   </script>
